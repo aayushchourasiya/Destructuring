@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Destructuting!</title>
+    </head>
+    <body>
+        <p id="result"></p>
+    </body>
+    <script>
+        //Array Destructuring
+        const arr = [1,2,3,4,5,6,7,8,9,0];
+        console.log("Array : " , arr);
+        const [a,b,...c] = arr;//Storing values at 0 and 1 index in a and b. And the remaining values in array c by using spread operator.
+        console.log("Variables : " , a , b ,c);
+
+        //Object Destructuring
+        const obj = {
+            fname : "Aayush",
+            lname : "Chourasiya",
+            email : "a@c.com",
+            phone : "123456"
+        }
+        console.log("Object : " , obj);
+        const{fname, lname, ...other} = obj//We need to use same keys as variables if we want to use destructuring in objects!
+        const {fname: fool , lname : bool} = obj//If we again want to destructure or we want to 
+        //assign variables with different names, we need to use colon to pass the value from keyname
+        //to the new variable!
+        console.log("Variables : ",fname,lname,other,fool,bool);
+
+        </script>
+</html>
